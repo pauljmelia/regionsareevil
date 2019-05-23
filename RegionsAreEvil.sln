@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandRegions.Vsix", "ExpandRegions\ExpandRegions.Vsix\ExpandRegions.Vsix.csproj", "{385A8ABF-958E-4172-B699-F78FC166C254}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegionsAreEvil.vsix", "src\RegionsAreEvil.vsix\RegionsAreEvil.vsix.csproj", "{385A8ABF-958E-4172-B699-F78FC166C254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandRegions", "ExpandRegions\ExpandRegions\ExpandRegions.csproj", "{3343DBB6-1BD1-4824-A369-BEA0F5A08FE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegionsAreEvil", "src\RegionsAreEvil\RegionsAreEvil.csproj", "{3343DBB6-1BD1-4824-A369-BEA0F5A08FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB398757-6C90-46FE-9506-9548CE26303C}
 	EndGlobalSection
 EndGlobal

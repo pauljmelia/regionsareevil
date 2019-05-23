@@ -1,4 +1,10 @@
-﻿namespace ExpandRegions
+﻿// -----------------------------------------------------------------------
+// <copyright file="Constants.cs" company="Equilogic (Pty) Ltd">
+//     Copyright © Equilogic (Pty) Ltd. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace RegionsAreEvil
 {
     internal static class Constants
     {

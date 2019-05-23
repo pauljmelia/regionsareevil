@@ -1,20 +1,19 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿// -----------------------------------------------------------------------
+// <copyright file="RegionTextViewHandler.cs" company="Equilogic (Pty) Ltd">
+//     Copyright © Equilogic (Pty) Ltd. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------
 
-using Microsoft.VisualStudio.Text.Editor;
-using Microsoft.VisualStudio.Text.Outlining;
-
-namespace ExpandRegions
+namespace RegionsAreEvil
 {
+    using System;
+    using System.Diagnostics.CodeAnalysis;
+
+    using Microsoft.VisualStudio.Text.Editor;
+    using Microsoft.VisualStudio.Text.Outlining;
+
     public class RegionTextViewHandler
     {
-        #region Private Fields
-
-        private IWpfTextView _textView;
-        private IOutliningManager _outliningManager;
-
-        #endregion
-
         #region Initialization
 
         private RegionTextViewHandler(IWpfTextView textView, IOutliningManagerService outliningManagerService)
@@ -43,6 +42,13 @@ namespace ExpandRegions
 
         #endregion
 
+        #region Private Fields
+
+        private IWpfTextView _textView;
+        private IOutliningManager _outliningManager;
+
+        #endregion
+
         #region Private Methods
 
         private void OnClosed(object sender, EventArgs e)
@@ -63,18 +69,16 @@ namespace ExpandRegions
 
         private void OnRegionsCollapsed(object sender, RegionsCollapsedEventArgs e)
         {
-            foreach (ICollapsed collapsed in e.CollapsedRegions)
+            foreach (var collapsed in e.CollapsedRegions)
             {
                 try
                 {
                     _outliningManager.Expand(collapsed);
                 }
-                catch (InvalidOperationException)
-                {
-                }
+                catch (InvalidOperationException) { }
             }
 
-            _outliningManager.RegionsCollapsed -= OnRegionsCollapsed;
+            //_outliningManager.RegionsCollapsed -= OnRegionsCollapsed;
         }
 
         #endregion

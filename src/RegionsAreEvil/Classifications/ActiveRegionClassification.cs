@@ -1,11 +1,17 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Media;
+﻿// -----------------------------------------------------------------------
+// <copyright file="ActiveRegionClassification.cs" company="Equilogic (Pty) Ltd">
+//     Copyright © Equilogic (Pty) Ltd. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------
 
-using Microsoft.VisualStudio.Text.Classification;
-using Microsoft.VisualStudio.Utilities;
-
-namespace ExpandRegions.Classifications
+namespace RegionsAreEvil.Classifications
 {
+    using System.ComponentModel.Composition;
+    using System.Windows.Media;
+
+    using Microsoft.VisualStudio.Text.Classification;
+    using Microsoft.VisualStudio.Utilities;
+
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = Constants.ActiveRegionClassificationTypeNames)]
     [Name(Constants.ActiveRegionName)]
