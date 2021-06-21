@@ -17,28 +17,4 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <!--<ItemGroup>
-    <Analyzer Include="..\..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.0.102\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.0.102\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Microsoft.VisualStudio.CoreUtility" Version="16.0.467" />
-    <PackageReference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime" Version="14.3.26930" />
-    <PackageReference Include="Microsoft.VisualStudio.SDK.EmbedInteropTypes" Version="15.0.27" />
-    <PackageReference Include="Microsoft.VisualStudio.Text.Data" Version="16.0.467" />
-    <PackageReference Include="Microsoft.VisualStudio.Text.Logic" Version="16.0.467" />
-    <PackageReference Include="Microsoft.VisualStudio.Text.UI" Version="16.0.467" />
-    <PackageReference Include="Microsoft.VisualStudio.Text.UI.Wpf" Version="16.0.467" />
-    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="16.0.102" />
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.0.102" />
-    <PackageReference Include="Microsoft.VisualStudio.Validation" Version="15.3.58" />
-    <PackageReference Include="System.Collections.Immutable" Version="1.6.0-preview5.19224.8" />
-    <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.6.0-preview6.19259.10" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0-preview.18571.3" />
-  </ItemGroup>
-  <Import Project="..\..\packages\Microsoft.VisualStudio.SDK.EmbedInteropTypes.15.0.27\build\Microsoft.VisualStudio.SDK.EmbedInteropTypes.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.SDK.EmbedInteropTypes.15.0.27\build\Microsoft.VisualStudio.SDK.EmbedInteropTypes.targets')" />
-  <Import Project="..\..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.0.102\build\Microsoft.VisualStudio.Threading.Analyzers.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.0.102\build\Microsoft.VisualStudio.Threading.Analyzers.targets')" />-->
 </Project>

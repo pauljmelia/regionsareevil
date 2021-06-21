@@ -7,7 +7,6 @@
 namespace RegionsAreEvil
 {
     using System.ComponentModel.Composition;
-
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Outlining;
     using Microsoft.VisualStudio.Utilities;
@@ -19,11 +18,15 @@ namespace RegionsAreEvil
     public class TextViewCreationListener : IWpfTextViewCreationListener
     {
         #region Public Properties
-
-        [Import(typeof(IOutliningManagerService))]
-        public IOutliningManagerService OutliningManagerService { get; set; }
+        private readonly IOutliningManagerService _outliningManagerService;
 
         #endregion
+
+        [ImportingConstructor]
+        public TextViewCreationListener(IOutliningManagerService outliningManagerService)
+        {
+            _outliningManagerService = outliningManagerService;
+        }
 
         #region  IWpfTextViewCreationListener Members
 
@@ -31,12 +34,12 @@ namespace RegionsAreEvil
 
         public void TextViewCreated(IWpfTextView textView)
         {
-            if (textView == null || OutliningManagerService == null)
+            if (textView == null || _outliningManagerService == null)
             {
                 return;
             }
 
-            RegionTextViewHandler.CreateHandler(textView, OutliningManagerService);
+            RegionTextViewHandler.CreateHandler(textView, _outliningManagerService);
         }
 
         #endregion
