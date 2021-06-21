@@ -8,7 +8,6 @@ namespace RegionsAreEvil
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Outlining;
 
@@ -73,12 +72,13 @@ namespace RegionsAreEvil
             {
                 try
                 {
-                    _outliningManager.Expand(collapsed);
+                    var span = collapsed.Extent.GetSpan(collapsed.Extent.TextBuffer.CurrentSnapshot);
+                    var lineText = span.Start.GetContainingLine().GetText();
+                    if (lineText.Contains("#region"))
+                        _outliningManager.Expand(collapsed);
                 }
                 catch (InvalidOperationException) { }
             }
-
-            //_outliningManager.RegionsCollapsed -= OnRegionsCollapsed;
         }
 
         #endregion
